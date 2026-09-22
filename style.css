@@ -8,9 +8,36 @@ body {
 }
 
 .content {
-  max-width: 750px;
+  font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+h1, h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content {
+  max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
+}
+
+div {
+  background-color: #10142a;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#page-title {
+  color: #ff4655;
+  font-size: 48px;
+}
+
+.highlight {
+  background-color: #ff4655;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 h1 { color: #ff4655; }
@@ -62,15 +89,28 @@ mark {
   padding: 0 4px;
 }
 
+.links {
+  padding-bottom: 0;
+  margin-bottom: 5px;
+}
+
 .gallery {
   display: flex;
-  gap: 10px;
+  gap: 25px;
 }
 
 .gallery img {
-  width: 33.33%;
-  height: 220px;
-  object-fit: cover;
+  border: 3px solid rgb(17, 38, 81);
+  border-radius: 40px;
+}
+
+.gallery img {
+  width: 30.5%;
+  height: 250px;
+  object-fit:cover;
   margin: 0;
-  border-radius: 6px;
+}
+
+.gallery img:last-child {
+  object-position: 60% center;
 }
