@@ -17,8 +17,8 @@ body {
 
 .header {
   background-color: #ffd0c4;
-  padding: 40px;
-  border-radius: 16px;
+  padding: 50px;
+  border-radius: 32px;
 }
 
 .middle {
@@ -29,7 +29,7 @@ body {
 .left-sidebar {
   background-color: #ffe89a;
   flex: 1;
-  min-height: 350px;
+  min-height: 850px;
   padding: 30px;
   border-radius: 16px;
 }
@@ -52,10 +52,10 @@ body {
 
 .footer {
   background-color: #f2c14e;
-  padding: 30px;
-  border-radius: 16px;
+  padding: 50px;
+  border-radius: 32px;
 }
 
 a {
-  color: #8a3d0a;
+  color: #964c1b;
 }

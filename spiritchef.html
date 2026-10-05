@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirit Chef Kitchen</title>
+  <link rel="stylesheet" href="cook.css">
+</head>
+
+<body>
+
+  <main class="kitchen">
+
+    <h1>The Spirit Chef Kitchen</h1>
+    <p class="intro">A hungry spirit just walked in! Pick the right ingredients according to their order, then hit Cook.</p>
+
+    <section class="order">
+      <h2>Today's order</h2>
+      <div class="order-circle">
+        <img id="order-image" src="" alt="">
+      </div>
+      <p id="order-name"></p>
+      <p id="order-list"></p>
+    </section>
+
+    <section class="bowl">
+      <h2>Your bowl</h2>
+      <div id="bowl-contents"></div>
+    </section>
+
+    <section class="pantry">
+      <h2>Ingredients</h2>
+
+      <div class="ingredient-grid">
+        <button class="ingredient" data-name="Apple"><img src="Apple.png" alt=""><span>Apple</span></button>
+        <button class="ingredient" data-name="Carrot"><img src="Carrot.png" alt=""><span>Carrot</span></button>
+        <button class="ingredient" data-name="Celery"><img src="Celery.png" alt=""><span>Celery</span></button>
+        <button class="ingredient" data-name="Cucumber"><img src="Cucumber.png" alt=""><span>Cucumber</span></button>
+        <button class="ingredient" data-name="Egg"><img src="Egg.png" alt=""><span>Egg</span></button>
+
+        <button class="ingredient" data-name="Ember Rock"><img src="Ember Rock.png" alt=""><span>Ember Rock</span></button>
+        <button class="ingredient" data-name="Ice"><img src="Ice.png" alt=""><span>Ice</span></button>
+        <button class="ingredient" data-name="Longing Broth"><img src="Longing Broth.png" alt=""><span>Longing Broth</span></button>
+        <button class="ingredient" data-name="Meat"><img src="Meat.png" alt=""><span>Meat</span></button>
+        <button class="ingredient" data-name="Mushroom"><img src="Mushroom.png" alt=""><span>Mushroom</span></button>
+
+        <button class="ingredient" data-name="Pepper"><img src="Pepper.png" alt=""><span>Pepper</span></button>
+        <button class="ingredient" data-name="Potato"><img src="Potato.png" alt=""><span>Potato</span></button>
+        <button class="ingredient" data-name="Salt"><img src="Salt.png" alt=""><span>Salt</span></button>
+        <button class="ingredient" data-name="Sugar Cane"><img src="Sugar Cane.png" alt=""><span>Sugar Cane</span></button>
+        <button class="ingredient" data-name="Wheat"><img src="Wheat.png" alt=""><span>Wheat</span></button>
+      </div>
+
+      <button id="cook-button">🔥 Cook!</button>
+      <p id="result" class="result"></p>
+      <button id="next-button" hidden>Next order</button>
+    </section>
+
+    <a class="back-link" href="index.html">Back to The Book of Tati</a>
+  </main>
+
+  <script src="cook.js"></script>
+
+</body>
+</html>
