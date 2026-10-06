@@ -21,7 +21,7 @@ const recipes = [
     ingredients: ["Ember Rock", "Meat", "Potato", "Carrot", "Pepper"]
   },
   {
-    name: "Spicy Amber Dumplings",
+    name: "Spicy Ember Dumplings",
     image: "Spicy Dumplings.png",
     ingredients: ["Wheat", "Meat", "Pepper", "Ember Rock"]
   }
