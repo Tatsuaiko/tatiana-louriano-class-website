@@ -1,3 +1,4 @@
+// AI-assisted code (from Exercise Six): recipes, ingredient picking, and cooking
 const recipes = [
   {
     name: "Forest Hearty Apple Stew",
@@ -20,7 +21,7 @@ const recipes = [
     ingredients: ["Ember Rock", "Meat", "Potato", "Carrot", "Pepper"]
   },
   {
-    name: "Spicy Ember Dumplings",
+    name: "Spicy Amber Dumplings",
     image: "Spicy Dumplings.png",
     ingredients: ["Wheat", "Meat", "Pepper", "Ember Rock"]
   }
@@ -37,6 +38,11 @@ const ingredientButtons = document.querySelectorAll(".ingredient");
 const cookButton = document.getElementById("cook-button");
 const result = document.getElementById("result");
 const nextButton = document.getElementById("next-button");
+
+// AI-assisted code: new elements for offering the dish to the spirit
+const spirit = document.getElementById("spirit");
+const spiritMessage = document.getElementById("spirit-message");
+const offerButton = document.getElementById("offer-button");
 
 
 function showOrder() {
@@ -55,6 +61,10 @@ function showOrder() {
   result.textContent = "";
   result.className = "result";
   nextButton.hidden = true;
+
+  offerButton.hidden = true;
+  spirit.classList.remove("vibrant");
+  spiritMessage.textContent = "A hungry spirit is waiting... it looks so dull.";
 }
 
 function toggleIngredient(event) {
@@ -121,13 +131,22 @@ function cook() {
 
   if (hasEverything && noExtras) {
     showDish(recipe);
-    result.textContent = "Order up! The spirit loved your " + recipe.name + "! ✨";
+    result.textContent = "Order up! Your " + recipe.name + " is ready. Offer it to the spirit!";
     result.className = "result success";
-    nextButton.hidden = false;
+    offerButton.hidden = false;
   } else {
     result.textContent = "Not quite! Check the order and swap your ingredients.";
     result.className = "result fail";
   }
+}
+
+// AI-assisted code: offering the dish makes the spirit vibrant
+function offerDish() {
+  const recipe = recipes[currentRecipe];
+  spirit.classList.add("vibrant");
+  spiritMessage.textContent = "The spirit loved your " + recipe.name + "! Its color is back! ✨";
+  offerButton.hidden = true;
+  nextButton.hidden = false;
 }
 
 function pickRandomRecipe() {
@@ -150,6 +169,9 @@ ingredientButtons.forEach(function (button) {
 });
 cookButton.addEventListener("click", cook);
 nextButton.addEventListener("click", nextOrder);
+
+// AI-assisted code: event listener for the offer button
+offerButton.addEventListener("click", offerDish);
 
 pickRandomRecipe();
 showOrder();
